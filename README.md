@@ -16,7 +16,7 @@ HTML will be used to create the basic layout of the pages, CSS will style and ad
 
 ### Listed Dances Page
 
-<img width="389" alt="Dance Screen" src="https://github.com/MysticKim3/260StartUp/assets/83422570/f893b465-3b43-4453-8c5a-4d6675ae16c5">
+<img width="389" alt="Updated Dance Screen" src="https://github.com/MysticKim3/260StartUp/assets/83422570/0d0a9e09-95ff-46ae-a23f-d894f9b99d1c">
 
 ### Dance Editing Screen
 
