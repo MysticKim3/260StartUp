@@ -12,4 +12,14 @@ HTML will be used to create the basic layout of the pages, CSS will style and ad
 ## Website Layout
 ### Login Page
 
-![Screenshot of simple login page.](<img width="391" alt="Login Page" src="https://github.com/MysticKim3/260StartUp/assets/83422570/6a699246-e92f-4fb1-a37f-08328ba65229">)
+<img width="391" alt="Login Page" src="https://github.com/MysticKim3/260StartUp/assets/83422570/901c5a7e-0b67-475e-ac70-c49cd99dbc32">
+
+### Listed Dances Page
+
+<img width="389" alt="Dance Screen" src="https://github.com/MysticKim3/260StartUp/assets/83422570/f893b465-3b43-4453-8c5a-4d6675ae16c5">
+
+### Dance Editing Screen
+
+<img width="644" alt="Edit Song page" src="https://github.com/MysticKim3/260StartUp/assets/83422570/d7aa7f40-d366-4b18-b686-eacce454b164">
+
+
