@@ -12,4 +12,4 @@ HTML will be used to create the basic layout of the pages, CSS will style and ad
 ## Website Layout
 ### Login Page
 
-![Screenshot of simple login page.](img width="391" alt="Login Page" src="https://github.com/MysticKim3/260StartUp/assets/83422570/6a699246-e92f-4fb1-a37f-08328ba65229")
+![Screenshot of simple login page.](<img width="391" alt="Login Page" src="https://github.com/MysticKim3/260StartUp/assets/83422570/6a699246-e92f-4fb1-a37f-08328ba65229">)
