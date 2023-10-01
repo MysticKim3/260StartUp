@@ -22,4 +22,12 @@ HTML will be used to create the basic layout of the pages, CSS will style and ad
 
 <img width="644" alt="Edit Song page" src="https://github.com/MysticKim3/260StartUp/assets/83422570/d7aa7f40-d366-4b18-b686-eacce454b164">
 
+## Updates
+### Html Updates
+- Wrote html for the three pages
+- Added login button that transfers to dance screen
+- Go to song changes from dance to song screen
+- Hardcoded text on song screen/dance screen where generated/saved/realtime data would go
+- Image on login screen
+
 
