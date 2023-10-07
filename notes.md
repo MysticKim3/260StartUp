@@ -16,3 +16,7 @@ Order of using git
 - mkdir -p services/simon/public (or services/startup/public)
 - exit
 - scp -r -i key * ubuntu@website:services/simon/public (or services/startup/public)
+### CSS styling
+- div elements work really well in flex designs
+- flex-direction can organize in rows or columns
+- can specify padding for elements to give spacing in layout
