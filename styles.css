@@ -1,0 +1,46 @@
+* {
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    box-sizing: border-box;
+}
+html {
+    margin: 2rem;
+}
+h1 {
+    font-family: 'Brush Script MT';
+}
+h2 {
+    font-size: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+input {
+    border: none;
+    border-bottom: 0.1em solid;
+} 
+button {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    padding-left: 3em;
+    padding-right: 3em;
+    border-radius: 10px;
+}
+.login {
+    text-align: center;
+}
+footer {
+    flex: 0 50px;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(249, 249, 249);
+}
+.github {
+    color: blueviolet;
+}
