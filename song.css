@@ -1,0 +1,62 @@
+* {
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    box-sizing: border-box;
+}
+html {
+    margin: 2rem;
+}
+footer {
+    flex: 0 50px;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(249, 249, 249);
+}
+.github {
+    color: blueviolet;
+}
+p {
+    margin: 0;
+}
+td {
+    margin: 0;
+    padding-left: 0.1em;
+}
+button {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+section {
+    display: flex;
+    flex-direction: row;
+}
+.songtitle {
+    flex: 2;
+    margin-bottom: 0.2em;
+}
+.choreonav {
+    flex: 1;
+}
+.choreonav1 {
+    flex: 1;
+    font-weight: bolder;
+}
+.username {
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+.lyrics {
+    flex: 1;
+}
+.choreography {
+    flex: 1;
+    outline: thin solid;
+    border-radius: 5px;
+}
