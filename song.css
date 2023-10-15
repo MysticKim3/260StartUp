@@ -6,6 +6,9 @@
 html {
     margin: 2rem;
 }
+h1 {
+    font-family: 'Brush Script MT';
+}
 footer {
     flex: 0 50px;
     padding: 1em;
