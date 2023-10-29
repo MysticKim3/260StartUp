@@ -23,7 +23,11 @@ Order of using git
 
 ## Midterm Study Guide
 Link element:
+- 
+
 Div tag:
+- 
+
 #title vs .grid selector:
 Padding vs margin:
 Flex display:
