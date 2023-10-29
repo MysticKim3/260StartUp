@@ -43,7 +43,7 @@
             <section>
                 <div class="songtitle" id="songtitle"><b>Song Title</b></div>
                 <div class="choreonav"><b>View others</b></div>
-                <div class="choreonav1"><span>⇨</span></div>
+                <div class="choreonav1"><span id="arrow" onclick="otherChoreo()">⇦⇨</span></div>
             </section>
             <section>
                 <div class="lyrics">
@@ -55,24 +55,24 @@
                 </div>
                 <table class="choreography">
                     <tr>
-                        <td>1.<input type="text"/></td>
+                        <td>1.<input type="text" id="txt1"/></td>
                         <!-- <td>(Ex: 1.Jump up +)</td> -->
                     </tr>
                     <tr>
-                        <td>2.<input type="text"/></td>
+                        <td>2.<input type="text" id="txt2"/></td>
                     </tr>
                     <tr>
-                        <td>3.<input type="text"/></td>
+                        <td>3.<input type="text" id="txt3"/></td>
                     </tr>
                     <tr>
-                        <td>4.<input type="text"/></td>
+                        <td>4.<input type="text" id="txt4"/></td>
                     </tr>
                     <tr>
-                        <td>5.<input type="text"/></td>
+                        <td>5.<input type="text" id="txt5"/></td>
                     </tr>
                 </table>
             </section>
-            <button>
+            <button onclick = "saveEdits()">
                 Save Edits
             </button>
         </main>

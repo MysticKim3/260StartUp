@@ -10,6 +10,13 @@ function setTitles() {
     t2.textContent = danceSongs[1];
     const t3 = document.getElementById("t3");
     t3.textContent = danceSongs[2];
+    const cont = document.getElementById("contributions");
+    const numCont = localStorage.getItem("numConts");
+    if (numCont == null) {
+        cont.textContent = "You've made 0 contributions!";
+    } else {
+        cont.textContent = "You've made " + numCont.toString() + " contributions!";
+    }
 }
 
 function showSong(i) {
