@@ -20,7 +20,12 @@ function setSong() {
     if (song == null) {
         return;
     }
-    const mylyrs = JSON.parse(localStorage.getItem(song));
+    var mylyrs;
+    if (localStorage.getItem(song) != null){
+        mylyrs = JSON.parse(localStorage.getItem(song));
+    } else {
+        mylyrs = null;
+    }
     if (mylyrs != null) {
         mylyrics = mylyrs;
         const txt1 = document.getElementById("txt1");
@@ -65,9 +70,9 @@ function saveEdits() {
     localStorage.setItem(song, JSON.stringify(mylyrics));
     numCont = localStorage.getItem("numConts");
     if (numCont == null) {
-        localStorage.setItem("numConts", 1);
+        localStorage.setItem("numConts", (1).toString());
     } else {
-        localStorage.setItem("numConts", numCont+1);
+        localStorage.setItem("numConts", (parseInt(numCont)+1).toString());
     }
 }
 
@@ -81,28 +86,28 @@ function otherChoreo() {
         plus = "   +";
     } else {
         back.value = "⇨"
-        //nextLyrs = [mylyrics[1], mylyrics[2], mylyrics[3], mylyrics[4], mylyrics[5]];
+        nextLyrs = [mylyrics[1], mylyrics[2], mylyrics[3], mylyrics[4], mylyrics[5]];
         plus = "";
     }
 
     const txt1 = document.getElementById("txt1");
     txt1.value = nextLyrs[0] + plus;
-    // txt1.addEventListener("click", function(){const txt1 = document.getElementById("txt1");
-    // mylyrics[1] = txt1.value;})
+    txt1.addEventListener("click", function(){const txt1 = document.getElementById("txt1");
+    mylyrics[1] = txt1.value.slice(0, -2);})
     const txt2 = document.getElementById("txt2");
     txt2.value = nextLyrs[1] + plus;
-    // txt2.addEventListener("click", function(){const txt2 = document.getElementById("txt2");
-    // mylyrics[2] = txt2.value;})
+    txt2.addEventListener("click", function(){const txt2 = document.getElementById("txt2");
+    mylyrics[2] = txt2.value.slice(0, -2);})
     const txt3 = document.getElementById("txt3");
     txt3.value = nextLyrs[2] + plus;
-    // txt3.addEventListener("click", function(){const txt3 = document.getElementById("txt3");
-    // mylyrics[3] = txt3.value;})
+    txt3.addEventListener("click", function(){const txt3 = document.getElementById("txt3");
+    mylyrics[3] = txt3.value.slice(0, -2);})
     const txt4 = document.getElementById("txt4");
     txt4.value = nextLyrs[3] + plus;
-    // txt4.addEventListener("click", function(){const txt4 = document.getElementById("txt4");
-    // mylyrics[4] = txt4.value;})
+    txt4.addEventListener("click", function(){const txt4 = document.getElementById("txt4");
+    mylyrics[4] = txt4.value.slice(0, -2);})
     const txt5 = document.getElementById("txt5");
     txt5.value = nextLyrs[4] + plus;
-    // txt5.addEventListener("click", function(){const txt5 = document.getElementById("txt5");
-    // mylyrics[5] = txt5.value;})
+    txt5.addEventListener("click", function(){const txt5 = document.getElementById("txt5");
+    mylyrics[5] = txt5.value.slice(0, -2);})
 }
