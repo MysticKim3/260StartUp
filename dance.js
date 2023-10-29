@@ -17,6 +17,18 @@ function setTitles() {
     } else {
         cont.textContent = "You've made " + numCont.toString() + " contributions!";
     }
+
+    const per1 = document.getElementById("person1");
+    per1.textContent = "Kia saved new choreography for " + danceSongs[0] + "!";
+    const per2 = document.getElementById("person2");
+    per2.textContent = "Andrew saved new choreography for " + danceSongs[1] + "!";
+
+    const v1 = document.getElementById("v1");
+    v1.textContent = Math.floor(Math.random() * 20).toString() + " versions";
+    const v2 = document.getElementById("v2");
+    v2.textContent = Math.floor(Math.random() * 20).toString() + " versions";
+    const v3 = document.getElementById("v3");
+    v3.textContent = Math.floor(Math.random() * 20).toString() + " versions";
 }
 
 function showSong(i) {
