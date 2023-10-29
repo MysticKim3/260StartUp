@@ -29,5 +29,9 @@ HTML will be used to create the basic layout of the pages, CSS will style and ad
 - Go to song changes from dance to song screen
 - Hardcoded text on song screen/dance screen where generated/saved/realtime data would go
 - Image on login screen
-
+### CSS Updates
+- Created a header that will condense into a bar that can open to display movement options
+- Created a footer that will change size based on screen size
+- Added flex elements in main to format sections on the screens
+- Kept all content but reformatted it to make it easier to navigate
 
