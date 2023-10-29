@@ -29,8 +29,18 @@ Div tag:
 - divison/section in HTML, container for HTML elements, styled by class/id attribute
 
 #title vs .grid selector:
+- .grid: selects all elements with class="grid"
+- #title: selects id with id="title"
+
 Padding vs margin:
+- margin: space around an element, pushes other elements away
+- padding: space btn element and content inside it, shrinks content inside or increases element size(default)
+
 Flex display:
+- direction: row/column
+- flex: 0 80 px; won't grow, starting height of 80 px
+- flex: 1; one unit of growth
+
 CSS padding:
 Arrow syntax function:
 Map with array:
