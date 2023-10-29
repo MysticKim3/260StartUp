@@ -23,10 +23,10 @@ Order of using git
 
 ## Midterm Study Guide
 Link element:
-- 
+- <link rel="stylesheet" href="styles.css">: links to an external source like to add CSS
 
 Div tag:
-- 
+- divison/section in HTML, container for HTML elements, styled by class/id attribute
 
 #title vs .grid selector:
 Padding vs margin:
