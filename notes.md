@@ -42,12 +42,32 @@ Flex display:
 - flex: 1; one unit of growth
 
 CSS padding:
+- can specify top/right/bottom/left
+- length px/pt/cm etc. or % of width of containing element
+
 Arrow syntax function:
+- gets rid of function name, returns by default
+- Ex: hello = function() {return "Hello World!";} -> hello = () => "Hello World!";
+- Ex with variable: hello = val => "Hello" + val;
+
 Map with array:
+- run a function to map an array to a new array
+- Ex: a = [1,2,3], a.map(i => i+i), new array = [2,4,6]
+
 getElementByID & addEventListener:
+- getElementByID: gets element with specified ID or null if it doesn't exist
+- document.addEventListener(event, function): event: "click", function can be any function that does something
+
 #selector in Javascript:
+- queryselector(): # selects element with id matching what is after #
+
 DOM:
+- document, document.queryselectro(), interface that allows the elements of a document to be modified
+- can find/change/add/delete elements, can have event handlers, can find HTML objects
+
 Default span CSS display property value:
+- inline, only takes up as much space as necessary, does not start on newline
+
 CSS to make all div elements have red background:
 Display image with hyperlink in HTML:
 Ordering of box models, inside to out, of CSS box model:
