@@ -69,24 +69,39 @@ Default span CSS display property value:
 - inline, only takes up as much space as necessary, does not start on newline
 
 CSS to make all div elements have red background:
+- div { background-color: red; }
+
 Display image with hyperlink in HTML:
+- <a href="website"> <img src="image.jpg" width="100" height="132"> </a>
+
 Ordering of box models, inside to out, of CSS box model:
+- content is surrounded by padding is surrounded by border is surrounded by margin
+
 Set text to green, don't affect double text:
+- can use specific id #id to change certain text element
+- possibly [text~="troubl"] { color: green; }
+
 Use Javascript to select element with id="byu" and change text color to green:
+- #byu { color: green; }
+
 Opening HTML tag for:
-- Paragraph:
-- Ordered list:
-- Unordered list:
-- Second level heading:
-- First level heading:
-- Third level heading:
+- Paragraph: <p>
+- Ordered list: <ol>
+- Unordered list: <ul>
+- Second level heading: <h2>
+- First level heading: <h1>
+- Third level heading: <h3>
+
 Declare document type to be HTML:
+- <!DOCTYPE html>
+
 Valid Javascript syntax for __ statements:
-- if:
-- else:
-- for:
-- while:
-- switch:
+- if: if (condition) { do_something; }
+- else: else { do_something_else; }
+- for: for (let i = 0; i < 5; i++) { do_something; }
+- while: while (i < cars.length) { do_something; increment i; }
+- switch: switch (var) { case 1: do_something; break; case 2: do_something_else; break; default: do_unknown_thing; }
+
 Syntax for creating Javascript object:
 Add new properties to Javascript objects:
 Tag to include Javascript on HTML page:
