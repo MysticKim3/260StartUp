@@ -85,15 +85,15 @@ Use Javascript to select element with id="byu" and change text color to green:
 - #byu { color: green; }
 
 Opening HTML tag for:
-- Paragraph: <p>
-- Ordered list: <ol>
-- Unordered list: <ul>
-- Second level heading: <h2>
-- First level heading: <h1>
-- Third level heading: <h3>
+- Paragraph:```<p>```
+- Ordered list: ```<ol>```
+- Unordered list: ```<ul>```
+- Second level heading: ```<h2>```
+- First level heading: ```<h1>```
+- Third level heading: ```<h3>```
 
 Declare document type to be HTML:
-- <!DOCTYPE html>
+- ```<!DOCTYPE html>```
 
 Valid Javascript syntax for __ statements:
 - if: if (condition) { do_something; }
