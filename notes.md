@@ -72,7 +72,7 @@ CSS to make all div elements have red background:
 - div { background-color: red; }
 
 Display image with hyperlink in HTML:
-- <a href="website"> <img src="image.jpg" width="100" height="132"> </a>
+- ```<a href="website"> <img src="image.jpg" width="100" height="132"> </a>```
 
 Ordering of box models, inside to out, of CSS box model:
 - content is surrounded by padding is surrounded by border is surrounded by margin
