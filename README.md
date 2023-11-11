@@ -34,4 +34,12 @@ HTML will be used to create the basic layout of the pages, CSS will style and ad
 - Created a footer that will change size based on screen size
 - Added flex elements in main to format sections on the screens
 - Kept all content but reformatted it to make it easier to navigate
-
+### JavaScript Updates
+- Saved login in local storage
+- Show username on dance/song pages
+- Saves your choreography for songs in local storage
+- Clicking go to song opens up page with lyrics for specific song
+- Can click to other choreo by tapping arrows, tapping on the box will add it to your choreography if you click the arrow to go back again (Must save edits or it disappears on refresh)
+- Saves number of times you save edits (number of contributions)
+- Contributions on songs is randomly generated number
+- Updated side bar to have song names assigned from in the song list (Under contribution count)
