@@ -1,5 +1,43 @@
 const danceSongs = ["The Hardest Love", "Summertime Friends", "Growing Up Is Hard"];
 
+async function loadScores() {
+	let edits = [];
+	try {
+	  // Get the latest high scores from the service
+	  const response = await fetch('/api/edits');
+	  edits = await response.json();
+  
+	  // Save the scores in case we go offline in the future
+	  localStorage.setItem('edits', JSON.stringify(scores));
+	} catch {
+	  // If there was an error then just use the last saved scores
+	  const editsText = localStorage.getItem('edits');
+	  if (editsText) {
+		edits = JSON.parse(editsText);
+	  }
+	}
+  
+	displayEdits(edits);
+}
+
+function displayEdits(edits) {
+	const tableBodyEl = document.querySelector('#people');
+  
+	if (edits.length) {
+	  // Update the DOM with the scores
+	  for (const [i, edit] of edits.entries()) {
+		const text = document.createElement('li');
+  
+		text.textContent = edit.name + " saved new choreography for " + edit.song + "!";
+  
+		tableBodyEl.appendChild(text);
+	  }
+	} else {
+	  tableBodyEl.innerHTML = '<li>No one has made any edits yet</li>';
+	}
+  }
+  
+
 function setTitles() {
     const element = document.getElementById("usn");
     const text = localStorage.getItem("userName");
@@ -18,10 +56,11 @@ function setTitles() {
         cont.textContent = "You've made " + numCont.toString() + " contributions!";
     }
 
-    const per1 = document.getElementById("person1");
-    per1.textContent = "Kia saved new choreography for " + danceSongs[0] + "!";
-    const per2 = document.getElementById("person2");
-    per2.textContent = "Andrew saved new choreography for " + danceSongs[1] + "!";
+    // const per1 = document.getElementById("person1");
+    // per1.textContent = "Kia saved new choreography for " + danceSongs[0] + "!";
+    // const per2 = document.getElementById("person2");
+    // per2.textContent = "Andrew saved new choreography for " + danceSongs[1] + "!";
+	loadScores();
 
     const v1 = document.getElementById("v1");
     v1.textContent = Math.floor(Math.random() * 20).toString() + " versions";

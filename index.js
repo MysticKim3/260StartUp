@@ -14,7 +14,14 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
+apiRouter.get('/edits', (_req, res) => {
+	res.send(edits);
+});
 
+apiRouter.post('/edit', (req, res) => {
+	edits = updateEdits(req.body, edits);
+	res.send(edits);
+})
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {
   res.sendFile('index.html', { root: 'public' });
@@ -24,3 +31,13 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
+let edits = [];
+function updateEdits(newEdit, edits) {
+	edits.push(newEdit);
+
+  if (edits.length > 10) {
+    edits.length = 10;
+  }
+
+  return edits;
+}

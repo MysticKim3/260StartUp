@@ -53,6 +53,46 @@ function setSong() {
     const p5 = document.getElementById("p5");
     p5.textContent = "5. " + lyrics[4];
 }
+async function saveEdit() {
+    const song = localStorage.getItem("song");
+    if (song == null) {
+        return;
+    }
+    const text = localStorage.getItem("userName");
+    const newEdit = {name: text, song: song};
+
+    try {
+      const response = await fetch('/api/edit', {
+        method: 'POST',
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify(newEdit),
+      });
+
+      // Store what the service gave us as the high scores
+      const edits = await response.json();
+      localStorage.setItem('edits', JSON.stringify(edits));
+    } catch {
+      // If there was an error then just track scores locally
+      this.updateEditsLocal(newEdit);
+    }
+	
+}
+
+function updateEditsLocal(newEdit) {
+    let edits = [];
+    const editsText = localStorage.getItem('edits');
+    if (editsText) {
+      edits = JSON.parse(editsText);
+    }
+    edits.push(newEdit);
+
+
+    if (edits.length > 10) {
+      edits.length = 10;
+    }
+
+    localStorage.setItem('edits', JSON.stringify(edits));
+  }
 
 function saveEdits() {
     const txt1 = document.getElementById("txt1");
@@ -74,6 +114,7 @@ function saveEdits() {
     } else {
         localStorage.setItem("numConts", (parseInt(numCont)+1).toString());
     }
+	saveEdit()
 }
 
 function otherChoreo() {
