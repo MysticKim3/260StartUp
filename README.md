@@ -1,6 +1,10 @@
 # 260StartUp
 ### Most recent edits
 - Added node and express to the project (reorganized files)
+- calls third party service to generate random picture on the login page
+- http services with /api/edit and /api/edits to get and save when someone makes an edit
+- frontend calls edit services, backend provides services
+- edit services can be seen if edits are saved in a song, it will appear as commentary on the dances screen which will fill up as saves are made.
 ## Project Idea
 Want to choreograph your favorite songs with others? This new website will allow you to look through songs and create your own dances to go along with others! You can also see edits from others and it will save your choreographies. It also keeps track of the number of contributions you make and will let you know when someone else makes an edit on a song!
 ## Key Features
@@ -47,3 +51,7 @@ HTML will be used to create the basic layout of the pages, CSS will style and ad
 - Updated side bar to have song names assigned from in the song list (Under contribution count)
 ### Service Updates
 - Added node and express to the project (reorganized files)
+- calls third party service to generate random picture on the login page
+- http services with /api/edit and /api/edits to get and save when someone makes an edit
+- frontend calls edit services, backend provides services
+- edit services can be seen if edits are saved in a song, it will appear as commentary on the dances screen which will fill up as saves are made.
