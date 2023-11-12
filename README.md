@@ -1,4 +1,6 @@
 # 260StartUp
+### Most recent edits
+- Added node and express to the project (reorganized files)
 ## Project Idea
 Want to choreograph your favorite songs with others? This new website will allow you to look through songs and create your own dances to go along with others! You can also see edits from others and it will save your choreographies. It also keeps track of the number of contributions you make and will let you know when someone else makes an edit on a song!
 ## Key Features
@@ -43,3 +45,5 @@ HTML will be used to create the basic layout of the pages, CSS will style and ad
 - Saves number of times you save edits (number of contributions)
 - Contributions on songs is randomly generated number
 - Updated side bar to have song names assigned from in the song list (Under contribution count)
+### Service Updates
+- Added node and express to the project (reorganized files)
