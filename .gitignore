@@ -3,3 +3,6 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/mongoTest/dbConfig.json
+/dbConfig.json
+/simon-db/dbConfig.json

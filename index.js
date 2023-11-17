@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const DB = require('./database.js');
 
 // The service port. In production the front-end code is statically hosted by the service on the same port.
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
@@ -14,12 +15,14 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
-apiRouter.get('/edits', (_req, res) => {
+apiRouter.get('/edits', async (_req, res) => {
+	const edits = await DB.getEdits();
 	res.send(edits);
 });
 
-apiRouter.post('/edit', (req, res) => {
-	edits = updateEdits(req.body, edits);
+apiRouter.post('/edit', async ( req, res) => {
+	DB.addEdit(req.body);
+	const edits = await DB.getEdits();
 	res.send(edits);
 })
 // Return the application's default page if the path is unknown
