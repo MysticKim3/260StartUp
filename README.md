@@ -3,6 +3,9 @@
 - Created MongoDB Atlas Database
 - Still has the backend endpoints for keeping track of when edits are made
 - Names/songs that have been edited are stored in the database for display as commentary on dances screen
+- Login page now offers creating user or login to existing and stores the users in the database
+- Encodes passwords in database
+- If logged in, will show different buttons on home page to "play" or go make dances, or logout (application functionality affected by authentication)
 ## Project Idea
 Want to choreograph your favorite songs with others? This new website will allow you to look through songs and create your own dances to go along with others! You can also see edits from others and it will save your choreographies. It also keeps track of the number of contributions you make and will let you know when someone else makes an edit on a song!
 ## Key Features
@@ -57,3 +60,7 @@ HTML will be used to create the basic layout of the pages, CSS will style and ad
 - Created MongoDB Atlas Database
 - Still has the backend endpoints for keeping track of when edits are made
 - Names/songs that have been edited are stored in the database for display on the side of songlist page
+### Login Updates
+- Login page now offers creating user or login to existing and stores the users in the database
+- Encodes passwords in database
+- If logged in, will show different buttons on home page to "play" or go make dances, or logout (application functionality affected by authentication)
