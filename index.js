@@ -1,8 +1,10 @@
+
 const express = require('express');
 const app = express();
 const DB = require('./database.js');
 const cookieParser = require('cookie-parser');
 const bcrypt = require('bcrypt');
+const { peerProxy } = require('./peerProxy.js');
 
 const authCookieName = 'token';
 
@@ -91,8 +93,11 @@ secureApiRouter.get('/edits', async (_req, res) => {
 });
 
 secureApiRouter.post('/edit', async ( req, res) => {
-	DB.addEdit(req.body);
-	const edits = await DB.getEdits();
+	//DB.addEdit(req.body);
+	//const edits = await DB.getEdits();
+	const edit = { ...req.body, ip: req.ip};
+	await DB.addEdit(edit);
+	const edits = await DB.getEdits()
 	res.send(edits);
 })
 
@@ -113,11 +118,18 @@ function setAuthCookie(res, authToken) {
 	  httpOnly: true,
 	  sameSite: 'strict',
 	});
-  }
+}
 
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
+const httpService = app.listen(port, () => {
+	console.log(`Listening on port ${port}`);
 });
+
+peerProxy(httpService);
+
+
+// app.listen(port, () => {
+//   console.log(`Listening on port ${port}`);
+// });
 
 let edits = [];
 function updateEdits(newEdit, edits) {

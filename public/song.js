@@ -68,6 +68,8 @@ async function saveEdit() {
         body: JSON.stringify(newEdit),
       });
 
+	  this.broadcastEvent(text, newEdit);
+
       // Store what the service gave us as the high scores
       const edits = await response.json();
       localStorage.setItem('edits', JSON.stringify(edits));
@@ -92,7 +94,8 @@ function updateEditsLocal(newEdit) {
     }
 
     localStorage.setItem('edits', JSON.stringify(edits));
-  }
+}
+
 
 function saveEdits() {
     const txt1 = document.getElementById("txt1");
@@ -151,4 +154,37 @@ function otherChoreo() {
     txt5.value = nextLyrs[4] + plus;
     txt5.addEventListener("click", function(){const txt5 = document.getElementById("txt5");
     mylyrics[5] = txt5.value.slice(0, -2);})
+}
+
+
+function configureWebSocket() {
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    this.socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+    // this.socket.onopen = (event) => {
+    //   this.displayMsg('system', 'game', 'connected');
+    // };
+    // this.socket.onclose = (event) => {
+    //   this.displayMsg('system', 'game', 'disconnected');
+    // };
+    this.socket.onmessage = async (event) => {
+      const msg = JSON.parse(await event.data.text());
+	  this.displayMsg(msg.from, `added new Choreography for ${msg.value.song}`);
+    };
+}
+
+
+function displayMsg(from, msg) {
+	const page = window.open('dance.html');
+	const danceChat = page.document.getElementById('people');
+	danceChat.innerHTML = `<li>${from} ${msg}!</li>` + danceChat.innerHTML;
+	const update = document.getElementById('update');
+	update.innerHTML = `<div>${from} ${msg}</div>`;
+}
+
+function broadcastEvent(from, value) {
+	const event = {
+		from: from,
+		value: value,
+	};
+	this.socket.send(JSON.stringify(event));
 }
